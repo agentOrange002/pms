@@ -1,0 +1,17 @@
+server:
+  error:
+    include-stacktrace: never
+  port: 8082
+  
+spring:
+  application:
+    name: user-pms-service
+    
+eureka:
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
